@@ -45,6 +45,13 @@ function game() {
         }
         console.log(result);
     }
+    if (playerScore > computerScore) {
+        console.log("Congratulations! You win the game!");
+    } else if (computerScore > playerScore) {
+        console.log("Game Over! You lost this one.");
+    } else {
+        console.log("This game's a draw!");
+    }
 }
 
 game();
