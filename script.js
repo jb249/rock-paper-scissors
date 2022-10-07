@@ -24,6 +24,20 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = prompt("Rock, Paper, or Scissors?");
-const computerSelection = getComputerChoice(choices);
-console.log(playRound(playerSelection, computerSelection));
+// const playerSelection = prompt("Rock, Paper, or Scissors?");
+// const computerSelection = getComputerChoice(choices);
+// console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+    playerScore = 0;
+    computerScore = 0;
+    for (let i = 0; i < 5; i++) {
+        roundNumber = i + 1;
+        const playerSelection = prompt("Round " + roundNumber + "\nYou: " + playerScore + " | Computer: " + computerScore + "\nRock, Paper, or Scissors?");
+        const computerSelection = getComputerChoice(choices);
+        result = playRound(playerSelection, computerSelection);
+        console.log(result);
+    }
+}
+
+game();
